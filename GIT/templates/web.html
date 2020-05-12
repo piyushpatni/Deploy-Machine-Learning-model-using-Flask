@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<title> Rainfall prediction </title>
+</head>
+<hr>
+
+<form action='/predict' method="POST">
+
+<label for="State">State:</label>
+<select id="State" name="State" required autofocus>
+	<option value="0">Select your choice</option>
+  <option value="123">ARUNACHAL PRADESH</option>
+  <option value="MEGHALAYA" name="MEGHALAYA">MEGHALAYA</option>
+  <option value="00100000000000000000000000">NAGALAND</option>
+  <option value="00010000000000000000000000">SIKKIM</option>
+	<option value="0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">WEST BENGAL</option>
+	<option value="0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">ORISSA</option>
+	<option value="0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">JHARKHAND</option>
+	<option value="0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">BIHAR</option>
+	<option value="0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">UTTAR PRADESH</option>
+	<option value="0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">UTTARAKHAND</option>
+	<option value="0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">HARYANA</option>
+	<option value="0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0">PUNJAB</option>
+	<option value="0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0">HIMACHAL PRADESH</option>
+	<option value="0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0">JAMMU & KASHMIR</option>
+	<option value="0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0">RAJASTHAN</option>
+	<option value="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0">MADHYA PRADESH</option>
+	<option value="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0">GUJARAT</option>
+	<option value="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0">SAURASHTRA</option>
+	<option value="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0">GOA</option>
+	<option value="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0">MAHARASHTRA</option>
+	<option value="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0">CHHATTISGARH</option>
+	<option value="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0">ANDHRA PRADESH</option>
+	<option value="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0">TELANGANA</option>
+	<option value="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0">TAMIL NADU</option>
+	<option value="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0">KARNATAKA</option>
+	<option value="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1">KERALA</option>
+
+</select>
+</hr>
+<br>
+<br>
+
+<br><button type="submit" value="submit" class="btn-large waves-effect waves-light orange">SUBMIT
+</button>
+	</form>
+<br>
+        {{ pred }}
+<br>
+
+</body>

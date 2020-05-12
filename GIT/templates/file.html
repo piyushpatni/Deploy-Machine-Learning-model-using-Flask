@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+	<title> Home Page  </title>
+<link rel="stylesheet" type='text/css' href="{{ url_for('static',filename='s.css')}}">
+
+</head>
+<body  >
+
+
+<h1 align="center" style="color: #f9fafa" >
+	<font face="Lato" >Rainfall Prediction</font>
+</h1>
+
+<form action='/predict' method="POST">
+	<div align="center" style="color: #f9fafa">
+<label for="State">State:</label>
+<select id="State" name="State" required>
+	<option name="State" value="0">Select your choice</option>
+  <option value="1" label="Arunachal Pradesh">ARUNACHAL PRADESH</option>
+  <option value="2" label="Maghalaya">MEGHALAYA</option>
+  <option value="3" label="Nagaland">NAGALAND</option>
+  <option value="4" label="Sikkim">SIKKIM</option>
+	<option value="5">WEST BENGAL</option>
+	<option value="6">ORISSA</option>
+	<option value="7">JHARKHAND</option>
+	<option value="8">BIHAR</option>
+	<option value="9">UTTAR PRADESH</option>
+	<option value="10">UTTARAKHAND</option>
+	<option value="11">HARYANA</option>
+	<option value="12">PUNJAB</option>
+	<option value="13">HIMACHAL PRADESH</option>
+	<option value="14">JAMMU & KASHMIR</option>
+	<option value="15">RAJASTHAN</option>
+	<option value="16">MADHYA PRADESH</option>
+	<option value="17">GUJARAT</option>
+	<option value="18">SAURASHTRA</option>
+	<option value="19">GOA</option>
+	<option value="20">MAHARASHTRA</option>
+	<option value="21">CHHATTISGARH</option>
+	<option value="22">ANDHRA PRADESH</option>
+	<option value="23">TELANGANA</option>
+	<option value="24">TAMIL NADU</option>
+	<option value="25">KARNATAKA</option>
+	<option value="26">KERALA</option>
+
+</select>
+<br>
+<br>
+
+Select Month:<br>
+<input type="radio" name="Month" value="11">Jan-Feb <br>
+&nbsp;&nbsp;<input type="radio" name="Month" value="12">Mar-May <br>
+<input type="radio" name="Month" value="13">Jun-Sep <br>
+&nbsp;<input type="radio" name="Month" value="14">Oct-Dec <br>
+<br>
+
+Enter Rainfall: <input  name="Rainfall" id="rainfall" type="text" class="validate">
+
+
+<br>
+		<br>
+<br><button type="submit" value="submit" class="btn-large waves-effect waves-light orange">SUBMIT
+</button>
+	</form>
+<br>
+<br>
+        {{ pred }}
+<br><br><br><br><br>
+
+
+
+</div>
+</body>
